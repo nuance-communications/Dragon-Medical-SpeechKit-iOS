@@ -1,0 +1,4 @@
+﻿!grammar cdd;
+!start <_main_>;
+<_main_> : !repeat (<_digits>, 1, *);
+<_digits> :  0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
