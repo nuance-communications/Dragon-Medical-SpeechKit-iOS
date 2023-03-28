@@ -5,8 +5,8 @@ This GitHub repository provides the Swift package for Dragon Medical SpeechKit (
 
 ## Installation
 To add the Swift package to your project, do the following:
-     1.     In the Xcode **Projects and Targets** list, select your project, then select the **Swift Package** tab.
-     2.     Select + in the lower left corner of the **Swift Packages** section to add a new package.
+     1.     In the Xcode **Projects and Targets** list, select your project, then select the **Package Dependencies** tab.
+     2.     Select + in the lower left corner of the **Package Dependencies** section to add a new package.
      3.     In the search bar, enter the repository URL: https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS
      4.     In the **Dependency Rule** menu, select **Exact version** and confirm the version number corresponds to the Dragon Medical SpeechKit version you want to add.
      5.     Click **Add Package**.
