@@ -5,16 +5,22 @@ This GitHub repository provides the Swift package for Dragon Medical SpeechKit (
 
 ## Installation
 To add the Swift package to your project, do the following:
-     1.     In the Xcode **Projects and Targets** list, select your project, then select the **Package Dependencies** tab.
-     2.     Select + in the lower left corner of the **Package Dependencies** section to add a new package.
-     3.     In the search bar, enter the repository URL: https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS
-     4.     In the **Dependency Rule** menu, select **Exact version** and confirm the version number corresponds to the Dragon Medical SpeechKit version you want to add.
-     5.     Click **Add Package**.
-     6.     In the **Choose Package Products** window, select Dragon-Medical-SpeechKit-iOS and choose your target, then select **Add Package**. Xcode will resolve the package and add the SpeechKit package to your selected target. You should see **Dragon-Medical-SpeechKit-iOS** listed in your package dependencies.
-  7.   To import the package, add the import statement to your code :
+1. In the Xcode **Projects and Targets** list, select your project, then select the **Package Dependencies** tab.
+2. Select + in the lower left corner of the **Package Dependencies** section to add a new package.
+3. In the search bar, enter the repository URL: https://github.com/nuance-communications/Dragon-Medical-SpeechKit-iOS
+4. In the **Dependency Rule** menu, select **Exact version** and confirm the version number corresponds to the Dragon Medical SpeechKit version you want to add.
+5. Click **Add Package**.
+6. In the **Choose Package Products** window, select Dragon-Medical-SpeechKit-iOS and choose your target, then select **Add Package**. Xcode will resolve the package and add the SpeechKit package to your selected target. You should see **Dragon-Medical-SpeechKit-iOS** listed in your package dependencies.
+7. To import the package, add the import statement to your code :
 
-    Swift: import DragonMedicalSpeechKit
-    Objective C: @import DragonMedicalSpeechKit;
+   Swift:
+   ```swift
+        import DragonMedicalSpeechKit
+   ```
+   Objective C:
+   ```objc
+        #import <DragonMedicalSpeechKit/DragonMedicalSpeechKit.h>
+   ```
 
 For more information on working with Swift packages, see: https://developer.apple.com/documentation/xcode/adding-package-dependencies-to-your-app
 
