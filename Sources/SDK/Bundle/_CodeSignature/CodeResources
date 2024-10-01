@@ -18,15 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Xduyv/f7bp1UHxYhNoaFN30NZQ0=
-		</data>
-		<key>acmod6_6000_enu_gen_car_f16_v1_0_1.dat</key>
-		<data>
-		maDlfAUFXCI0k2rHDr6wF6Uuo9w=
-		</data>
-		<key>anyspeech.fcf</key>
-		<data>
-		upHr8nDDvnkxSjFl1RtF6yX+XOk=
+		OkUKbk+c091xgXBgvHA7+Yj+xdQ=
 		</data>
 		<key>ca.lproj/DragonMedicalSpeechKit.strings</key>
 		<dict>
@@ -37,14 +29,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>cdd.bnf</key>
-		<data>
-		xd3iDWndUZABQmj9c2MtrVLjpNo=
-		</data>
-		<key>clc_enu_cfg3_v6_1_0.dat</key>
-		<data>
-		/Rs6pqWj5Cz8wq5wVFCja5vK0GI=
-		</data>
 		<key>da.lproj/DragonMedicalSpeechKit.strings</key>
 		<dict>
 			<key>hash</key>
@@ -162,14 +146,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>vocon3200_asr.dat</key>
-		<data>
-		SU90A6vEb6wg2xOJkIGin6dWbpc=
-		</data>
-		<key>wuw.fcf</key>
-		<data>
-		y80P46CTpDX2LOywtv0AAQE0WkY=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -194,20 +170,6 @@
 			EuBCzF2wMm2BBHFNYuAYUKHN6fFdMIFtUi3MAPiYNZY=
 			</data>
 		</dict>
-		<key>acmod6_6000_enu_gen_car_f16_v1_0_1.dat</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z3biA4ZYQHFgNi0EXCuyOyRQx6aB6UZ7Ta9LT5y9bZk=
-			</data>
-		</dict>
-		<key>anyspeech.fcf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fvfzYJfAMR4VC+/hmN/bO3EZwxAOoY06G9PIsXarj20=
-			</data>
-		</dict>
 		<key>ca.lproj/DragonMedicalSpeechKit.strings</key>
 		<dict>
 			<key>hash2</key>
@@ -216,20 +178,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>cdd.bnf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Jko+NlohMKHs4ux6sZDTBW21KRA24v4wBWRO954xReI=
-			</data>
-		</dict>
-		<key>clc_enu_cfg3_v6_1_0.dat</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cPsoCBfc7dv+KBHY7PakKhN35TtItclVNby+LzG7iVQ=
-			</data>
 		</dict>
 		<key>da.lproj/DragonMedicalSpeechKit.strings</key>
 		<dict>
@@ -347,20 +295,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>vocon3200_asr.dat</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			qZbaURa+JJ8aICWQRH3KkD2kk9h4mzwIq26VC7G4CRU=
-			</data>
-		</dict>
-		<key>wuw.fcf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			aBteLs7Fg7cNca84fvinICGCpUEfEhzMtJzretBv2V0=
-			</data>
 		</dict>
 	</dict>
 	<key>rules</key>
