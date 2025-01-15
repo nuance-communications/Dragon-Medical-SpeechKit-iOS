@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
   TODO: Add long description of the pod here.
   DESC
-  
+
   s.homepage         = 'https://github.com/klolage/DragonMedicalSpeechKitPod'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'klolage' => 'krishna.lolage@microsoft.com' }
@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
   s.platform = :ios
   s.source_files = 'Sources/SDK/**/*.{swift}'
   s.vendored_frameworks = "Sources/SDK/DragonMedicalSpeechKit.xcframework"
-  
+  s.swift_version = '5.0'
   s.dependency 'MicrosoftCognitiveServicesSpeech-iOS', '~> 1.33.0'
   
 end
