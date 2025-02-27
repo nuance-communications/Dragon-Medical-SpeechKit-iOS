@@ -1,0 +1,11 @@
+framework module DragonMedicalSpeechKit {
+  umbrella header "DragonMedicalSpeechKit.h"
+  
+  export *
+  module * { export * }
+  
+  link framework "AudioToolbox"
+  link framework "AVFoundation"
+  link framework "WebKit"
+  link "c++"
+}
