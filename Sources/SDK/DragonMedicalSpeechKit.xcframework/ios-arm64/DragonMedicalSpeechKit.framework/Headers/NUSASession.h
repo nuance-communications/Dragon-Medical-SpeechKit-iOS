@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -32,6 +32,7 @@
 	soon as user credentials are available and keep it open for the lifetime of the 
 	application. 
 */
+NS_ASSUME_NONNULL_BEGIN
 @interface NUSASession : NSObject {
 	@protected	
     __weak id<NUSASessionDelegate> delegate; 
@@ -48,7 +49,7 @@
 	conform to the NUSASessionDelegate protocol. The delegate will not be 
 	retained. 
  */
-@property (nonatomic, weak) id<NUSASessionDelegate> delegate;
+@property (nonatomic, weak, nullable) id<NUSASessionDelegate> delegate;
 
 /**	@brief Dragon Medical Server URL
 	@since 1.1
@@ -109,9 +110,42 @@ URL where the application help is hosted. If this value is set prior to calling 
 							web service and can be chosen by your integration. The application name is not 
 							part of the licensing information; it can be any string up to 50 characters in length. 
     @param authenticationToken     Pass  token acquired from the authentication library.
+    @param expiryTime Token expiry time
  */
 
 - (void) openForApplication: (NSString*) applicationName partnerGuid: (NSString*) partnerGuid licenseGuid: (NSString*) licenseGuid userId: (NSString*) userId authenticationToken: (NSString * _Nonnull) authenticationToken tokenExpiryTime:(NSDate * _Nonnull )expiryTime;
+
+/** @brief Authenticates a user with the Dragon Medical Server using authentication token.
+    @since 6.2
+
+    This message creates a connection to the Dragon Medical Server and authenticates
+    the application, user and account information as passed. Sessions are usually opened as
+    soon as user credentials are available in your application. Licensing errors will
+    be displayed to the end user of your application.
+ 
+    Note that the Dragon Medical Server will automatically free user licenses if there are
+    longer periods of inactivity. In these cases you do not need to explicitly reopen or close the
+    session; the license will be reaquired automatically with the next user activity, e.g. starting
+    a recording session.
+  
+    If the partnerGuid parameter were not specified (e.g. a @c nil object was passed),
+    Dragon Medical SpeechKit will not try to verify the license with the web service and will not offer
+    speech recognition related functionality to the end user or your application - it has the same effect
+    as not calling the method at all. E.g. calling startRecording:() will not have any effect.
+ 
+    Implement sessionDidReceiveInvalidAuthenticationToken delegate to know whether the token has expired. If expired, then get new token using authentication library and call the updateAuthenticationToken method
+
+    @param applicationName  Mandatory application name. The application name identifies your application on the
+                            web service and can be chosen by your integration. The application name is not
+                            part of the licensing information; it can be any string up to 50 characters in length.
+    @param partnerGuid  Partner GUID. Invalid partner guids will be rejected during runtime and
+                        cause an alert message to appear to the end user.
+    @param environmentId  Enviornment Id for MSFT tenant, it is optional
+    @param authenticationToken  Pass  token acquired from the authentication library.
+    @param expiryTime  Token expiry time
+ */
+
+- (void) openForApplication: (NSString * _Nonnull) applicationName partnerGuid: (NSString* _Nonnull) partnerGuid environmentId: (NSString* _Nullable) environmentId authenticationToken: (NSString * _Nonnull) authenticationToken tokenExpiryTime:(NSDate * _Nonnull )expiryTime;
 
 /** @brief Authenticates a user with the Dragon Medical Server.
     @since 1.0
@@ -181,7 +215,7 @@ URL where the application help is hosted. If this value is set prior to calling 
 	@return			Returns @c NO if recording could not be started. More information about the 
 					failure is passed in the error parameter. 
  */
-- (BOOL) startRecording: (NSError**) error;
+- (BOOL) startRecording: (NSError* _Nullable *_Nullable) error;
 
 /** @brief Stops recording audio data.
 	@since 1.0
@@ -269,6 +303,7 @@ URL where the application help is hosted. If this value is set prior to calling 
     @param token A new authentication token
     @param expiryTime Token expiry time
  */
-- (void) updateAuthenticationToken:(NSString * _Nonnull )token tokenExpiryTime:(NSDate * _Nonnull )expiryTime;
+- (void) updateAuthenticationToken:(NSString *)token tokenExpiryTime:(NSDate *)expiryTime;
 
 @end
+NS_ASSUME_NONNULL_END

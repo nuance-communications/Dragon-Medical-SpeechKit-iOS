@@ -4,7 +4,7 @@
 //
 //  Copyright 2012 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -35,6 +35,7 @@
 	best bound to the lifetime of the GUI view controller. 
 	
 */
+NS_ASSUME_NONNULL_BEGIN
 @interface NUSACustomVuiController : NSObject {
 	@protected
 	UIView*		view;
@@ -87,7 +88,7 @@
  conform to the NUSAVuiControllerDelegate protocol. The delegate will not be 
  retained and will send its messages to the thread that set the delegate property. 
  */
-@property (nonatomic, assign) id<NUSAVuiControllerDelegate> delegate; 
+@property (nonatomic, assign, nullable) id<NUSAVuiControllerDelegate> delegate;
 
 
 /** @brief NUSACustomVuiController delegate.
@@ -97,7 +98,7 @@
  conform to the NUSACustomVuiControllerDelegate protocol. The delegate will not be 
  retained and will send its messages to the thread that set the delegate property. 
  */
-@property (nonatomic, assign) id<NUSACustomVuiControllerDelegate> customDelegate;
+@property (nonatomic, assign, nullable) id<NUSACustomVuiControllerDelegate> customDelegate;
 
 /** @brief Deprecated The location of the volume meter.
  
@@ -118,7 +119,7 @@
  If this value is nil, a default blue color is used.
  The default value is nil.
  */
-@property (nonatomic, copy) UIColor* volumeMeterColor __attribute__((deprecated));
+@property (nonatomic, copy, nullable) UIColor* volumeMeterColor __attribute__((deprecated));
 
 /** @brief Deprecated The color of the volume meter for good sound quality.
  
@@ -129,7 +130,7 @@
  If this value is nil, a default red color is used.
  The default value is nil.
  */
-@property (nonatomic, copy) UIColor* volumeMeterBadQualityColor __attribute__((deprecated));
+@property (nonatomic, copy, nullable) UIColor* volumeMeterBadQualityColor __attribute__((deprecated));
 
 //////////////////////////////////////////////////////////////////////////////////////////
 /// @name Initializing the instance
@@ -146,7 +147,7 @@
 	@param aView GUI view that will be speech-enabled by this VUI controller object.
     @param speechEnabledControls An array of controls that should be speech-enabled.
 */
-- (id) initWithView: (UIView*)aView controls: (NSArray*)speechEnabledControls;
+- (id) initWithView: (UIView* _Nullable)aView controls: (NSArray* _Nullable)speechEnabledControls;
 
 /** @brief Initializes the VUI controller and optionally opens it.
 	@since 2.1
@@ -159,7 +160,7 @@
     @param speechEnabledControls An array of controls that should be speech-enabled.
 	@param open Flag indicating if a VUI controller should be initialized as open
  */
-- (id) initWithView: (UIView*)aView controls: (NSArray*)speechEnabledControls andOpen: (BOOL)open;
+- (id) initWithView: (UIView* _Nullable)aView controls: (NSArray*)speechEnabledControls andOpen: (BOOL)open;
 
 //////////////////////////////////////////////////////////////////////////////////////////
 /// @name Updating the voice user interface (VUI)
@@ -266,7 +267,7 @@
  
  @param documentId Document identifier under which the VUI form associated with this VuiController will be saved.  If this is the empty string, an unnamed VUI form will be saved.
  */
-- (void)closeWithDocumentId: (NSString*)documentId;
+- (void)closeWithDocumentId: (NSString* _Nullable)documentId;
 
 /** @brief Close VUI controller.
  @since 2.1
@@ -289,3 +290,4 @@
 @property (nonatomic, getter=isKeyboardVisibleByDefault) BOOL keyboardVisibleByDefault;
 
 @end
+NS_ASSUME_NONNULL_END

@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <UIKit/UIKit.h>
@@ -20,6 +20,7 @@
 	provided by the protocol are optional and can be implemented by the receiver. Messages will 
 	be sent on the thread that registered for the delegate. 
 */
+NS_ASSUME_NONNULL_BEGIN
 @protocol NUSAVuiControllerDelegate <NSObject>
 @optional
 
@@ -87,3 +88,4 @@
 - (void) vuiControllerDidRecognizeCommand: (NSString*) id spokenPhrase: (NSString*) spokenPhrase placeholderValues: (NSDictionary *) placeholderValues;
 
 @end
+NS_ASSUME_NONNULL_END

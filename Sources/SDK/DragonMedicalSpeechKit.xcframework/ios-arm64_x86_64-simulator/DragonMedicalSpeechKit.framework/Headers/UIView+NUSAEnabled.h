@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -18,6 +18,7 @@
 	@since 1.0
  
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface UIView (NUSAEnabled)
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -51,3 +52,4 @@
 - (BOOL) vuiEnabled; 
 
 @end
+NS_ASSUME_NONNULL_END

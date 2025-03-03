@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
  retained.
  */
 
-@property (nonatomic, weak) id<NUSAVirtualAssistantControllerV2Delegate> delegate;
+@property (nonatomic, weak, nullable) id<NUSAVirtualAssistantControllerV2Delegate> delegate;
 
 
 /**

@@ -4,7 +4,7 @@
 //
 //  Copyright (c) 2012 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1 
+//  SDK version: 6.2.2.1 
 //
 
 #import <Foundation/Foundation.h>
@@ -17,6 +17,7 @@
  @since 1.3
  
  */
+NS_ASSUME_NONNULL_BEGIN
 @interface NUSACommandPlaceholder : NSObject
 
 /** @brief Initializes a placeholder object.
@@ -42,3 +43,4 @@
 - (void)clearValues;
 
 @end
+NS_ASSUME_NONNULL_END

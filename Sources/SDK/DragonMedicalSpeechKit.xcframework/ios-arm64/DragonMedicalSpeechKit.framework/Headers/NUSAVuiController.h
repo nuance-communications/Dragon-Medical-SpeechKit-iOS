@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -27,6 +27,7 @@
  *
  *	This is the default topic used for VUI forms if no topic is specified by your integration.
  */
+NS_ASSUME_NONNULL_BEGIN
 extern NSString* const kNUSAVuiTopicGeneralMedicine;
 /** @brief VUI topic for an Internal Medicine-specific vocabulary */
 extern NSString* const kNUSAVuiTopicInternalMedicine;
@@ -153,7 +154,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
 	conform to the NUSAVuiControllerDelegate protocol. The delegate will not be 
 	retained and will send its messages to the thread that set the delegate property. 
 */
-@property (nonatomic, weak) id<NUSAVuiControllerDelegate> delegate; 
+@property (nonatomic, weak, nullable) id<NUSAVuiControllerDelegate> delegate;
 
 /** @brief Deprecated The location of the volume meter.
     
@@ -174,7 +175,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
  If this value is nil, a default blue color is used.
  The default value is nil.
  */
-@property (nonatomic, copy) UIColor* volumeMeterColor __attribute__((deprecated));
+@property (nonatomic, copy, nullable) UIColor* volumeMeterColor __attribute__((deprecated));
 
 /** @brief Deprecated The color of the volume meter for good sound quality.
     
@@ -185,7 +186,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
  If this value is nil, a default red color is used.
  The default value is nil.
 */
-@property (nonatomic, copy) UIColor* volumeMeterBadQualityColor __attribute__((deprecated));
+@property (nonatomic, copy, nullable) UIColor* volumeMeterBadQualityColor __attribute__((deprecated));
 
 /** @brief A Boolean value that determines whether the system keyboard should be shown by default.
  @since 1.6
@@ -213,7 +214,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
 
 	@param aView GUI view that will be speech enabled by this VUI controller object
 */
-- (id) initWithView: (UIView*)aView;
+- (id) initWithView: (UIView* _Nullable)aView;
 
 /** @brief Initializes the VUI controller and optionally opens it.
 	@since 2.1
@@ -342,7 +343,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
 
  @param documentId Identifier of the document to be associated with this VUi controller. If a VUI form was previously saved with the given documentId, it will be loaded and SR will be based on the previously saved state.
  */
-- (void)openWithDocumentId: (NSString*)documentId;
+- (void)openWithDocumentId: (NSString* _Nullable)documentId;
 
 /** @brief Close VUI controller.
  @since 2.1
@@ -358,7 +359,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
  
  @param documentId Document identifier under which the VUI form associated with this VuiController will be saved.  If this is the empty string, an unnamed VUI form will be saved.
  */
-- (void)closeWithDocumentId: (NSString*)documentId;
+- (void)closeWithDocumentId: (NSString* _Nullable)documentId;
 
 /** @brief Close VUI controller.
  @since 2.1
@@ -368,6 +369,7 @@ extern const NSInteger kNUSADocumentStateUncorrected;
  @param documentId Document identifier under which the VUI form associated with this VuiController will be saved.  If this is the empty string, an unnamed VUI form will be saved.
  @param documentState State of the document in the application workflow.
  */
-- (void)closeWithDocumentId: (NSString*)documentId andState: (NSInteger)documentState;
+- (void)closeWithDocumentId: (NSString* _Nullable)documentId andState: (NSInteger)documentState;
 
 @end
+NS_ASSUME_NONNULL_END

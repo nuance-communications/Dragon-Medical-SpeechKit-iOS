@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
  conform to the NUSAVirtualAssistantController protocol. The delegate won't be
  retained.
  */
-@property (nonatomic, weak) id<NUSAVirtualAssistantControllerDelegate> delegate;
+@property (nonatomic, weak, nullable) id<NUSAVirtualAssistantControllerDelegate> delegate;
 
 
 /**

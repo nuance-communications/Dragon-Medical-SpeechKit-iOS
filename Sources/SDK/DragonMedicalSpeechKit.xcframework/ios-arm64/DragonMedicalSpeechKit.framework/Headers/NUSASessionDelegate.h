@@ -4,10 +4,11 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <UIKit/UIKit.h>
+#import "NUSATypes.h"
 
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -93,5 +94,23 @@
  */
 - (void) sessionDidNotifyAuthenticationTokenIsAboutToExpire;
 
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/// @name Audio Interruption
+//////////////////////////////////////////////////////////////////////////////////////////
+
+/** @brief Called whenever audio interruption is received and its state changes
+    @param state state of audio interruption being received
+    @since 6.2
+ */
+- (void) sessionDidReceiveAudioInterruptionState:(NUSAAudioInterruptionState)state;
+
+
+/** @brief  Configures interrupt handling behavior when system displays incoming calls using a banner
+    @return Return true to continue recording.
+            By default SDK stops recording on receiving incoming call or other audio interrupts
+    @since 6.2
+ */
+- (BOOL) sessionShouldContinueRecordingDuringCallBanners;
 
 @end
