@@ -98,6 +98,7 @@ NS_ASSUME_NONNULL_END
 ## System requirements\*
 
 |  | Recommended | Supported |
+|-|-|-|
 | Operating System | iOS 18 | iOS 16 \- 18 |
 | Architecture |  | Physical device: arm64  iOS Simulator: x86\_64, arm64 |
 | Development environment | Xcode 16 | Xcode 15\-16 |
