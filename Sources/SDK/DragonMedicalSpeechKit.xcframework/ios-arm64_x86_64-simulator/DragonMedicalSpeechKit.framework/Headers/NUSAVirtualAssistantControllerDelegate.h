@@ -11,6 +11,7 @@
 /** @brief DMVA controller delegate.
  
  This delegate is used for all callbacks to the Dragon Medical Virtual Assistant (DMVA) client. It is registered with the NUSAVirtualAssistantController instance through the openWithModel method.  All the methods in the delegate are optional.*/
+NS_ASSUME_NONNULL_BEGIN
 @protocol NUSAVirtualAssistantControllerDelegate <NSObject>
 @optional
 /** @brief Handles dialog results.
@@ -75,3 +76,4 @@ Called when a concept upload or clear call has been received and processed by DM
 
 @end
 
+NS_ASSUME_NONNULL_END

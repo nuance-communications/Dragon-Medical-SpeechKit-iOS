@@ -4,7 +4,7 @@
 //
 //  Copyright 2011 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -66,3 +66,12 @@ typedef enum NUSAContentType {
     NUSAContentTypeAddWord
 } NUSAContentType;
 
+/** @brief Audio interruption state for session
+ @since 6.2
+ */
+typedef NS_ENUM(NSInteger, NUSAAudioInterruptionState) {
+    /** @brief Audio interruption began*/
+    NUSAAudioInterruptionStateBegan,
+    /** @brief Audio interruption ended*/
+    NUSAAudioInterruptionStateEnded
+};

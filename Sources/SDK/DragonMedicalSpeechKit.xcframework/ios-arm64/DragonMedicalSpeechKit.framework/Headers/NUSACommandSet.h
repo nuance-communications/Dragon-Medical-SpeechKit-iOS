@@ -4,7 +4,7 @@
 //
 //  Copyright (c) 2012 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -23,6 +23,7 @@
  
     A command set can be enabled (default) or disabled, in which case all the commands it contains are disabled.
 */
+NS_ASSUME_NONNULL_BEGIN
 @interface NUSACommandSet : NSObject {
     @protected
     BOOL        isEnabled;
@@ -58,7 +59,7 @@
  Placeholder identifiers must be enclosed in < and > in the spoken form. For example, if the ID of the referenced placeholder is "patient", a correct spoken form can be "select patient <patient>"
  
  Alternative spoken forms are created by calling this method multiple times for the same ID. */
-- (void)createCommand: (NSString *)id phrase: (NSString*) phrase displayString: (NSString *)displayString description: (NSString *)description;
+- (void)createCommand: (NSString *)id phrase: (NSString*) phrase displayString: (NSString * _Nullable)displayString description: (NSString *)description;
 
 /** @brief Enables or disables the command with the corresponding ID.
     @since 1.3
@@ -78,3 +79,4 @@
 @property (nonatomic, assign) BOOL isEnabled;
 
 @end
+NS_ASSUME_NONNULL_END

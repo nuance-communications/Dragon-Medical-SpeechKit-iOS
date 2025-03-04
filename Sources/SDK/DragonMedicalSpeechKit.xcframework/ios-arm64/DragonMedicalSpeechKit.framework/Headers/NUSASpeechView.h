@@ -4,7 +4,7 @@
 //
 //  Copyright (c) 2012 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <UIKit/UIKit.h>
@@ -35,7 +35,7 @@
  The default value is nil; in this case the default background color will be used. 
  It is only possible to set either the background color or background image of the speech view. If both values are set, the most recently set value will be used.
 */
-@property (nonatomic, retain) UIColor*  buttonBackgroundColor; 
+@property (nonatomic, retain, nullable) UIColor* buttonBackgroundColor;
 
 /** @brief The background image of the speech view.
  @since 1.3
@@ -43,13 +43,13 @@
  The default value is nil; in this case the default background image will be used.
  It is only possible to set either the background color or background image of the speech view. If both values are set, the most recently set value will be used.
  */
-@property (nonatomic, retain) UIImage*  buttonBackgroundImage; 
+@property (nonatomic, retain, nullable) UIImage* buttonBackgroundImage;
 
 /** @brief The background image of the speech view for highlighted state.
  @since 1.4
  
  The default value is nil; in this case the default background image will be used.
  */
-@property (nonatomic, retain) UIImage*  buttonBackgroundImageHighlighted;
+@property (nonatomic, retain, nullable) UIImage* buttonBackgroundImageHighlighted;
 
 @end

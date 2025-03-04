@@ -4,7 +4,7 @@
 //
 //  Copyright 2015 Nuance Communications, Inc. All rights reserved.
 //
-//  SDK version: 6.1.17.1
+//  SDK version: 6.2.2.1
 //
 
 #import <Foundation/Foundation.h>
@@ -18,6 +18,7 @@
 	@since 2.1
  
 */
+NS_ASSUME_NONNULL_BEGIN
 @interface UIView (NUSADocumentFieldId)
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -41,3 +42,4 @@
 - (NSString*) vuiDocumentFieldId; 
 
 @end
+NS_ASSUME_NONNULL_END
