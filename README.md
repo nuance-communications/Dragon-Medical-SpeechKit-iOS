@@ -2,7 +2,7 @@
 
 > ⚠️ **REPOSITORY MIGRATION NOTICE**
 > 
-> This repository has been moved to https://github.com/microsoftconnect/DMSK-iOS. All versions are available there. This repository will be disabled at the end of September 2026. Please update your package dependency to reference the new repository URL.
+> This repository has been moved to https://github.com/microsoftconnect/DMSK-iOS! All versions are available there. This repository will be disabled on September 7th, 2026! Please update your package dependency to reference the new repository URL.
 
 Dragon Medical SpeechKit enables industry-leading healthcare speech recognition services for mobile and desktop application developers. For more information, documentation and other resources, register at: https://www.nuance.com/healthcare/developers.html
 
